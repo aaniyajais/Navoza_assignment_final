@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>OrthoNow | Premium Orthopaedic Care</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#0f172a;
+overflow-x:hidden;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(16px);
+box-shadow:0 2px 20px rgba(0,0,0,0.04);
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#14b8a6;
+}
+
+.call-btn{
+background:linear-gradient(135deg,#14b8a6,#0f766e);
+color:white;
+padding:14px 22px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.call-btn:hover{
+transform:translateY(-2px);
+}
+
+.hero{
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:60px;
+align-items:center;
+padding:80px 8%;
+min-height:90vh;
+}
+
+.badge{
+display:inline-block;
+background:#ccfbf1;
+color:#0f766e;
+padding:10px 16px;
+border-radius:999px;
+font-size:14px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:62px;
+line-height:1.1;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#14b8a6;
+}
+
+.hero p{
+font-size:18px;
+color:#64748b;
+margin-bottom:25px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+}
+
+.feature{
+background:white;
+padding:18px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+font-weight:600;
+}
+
+.form-box{
+background:white;
+padding:35px;
+border-radius:26px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.form-box h2{
+font-size:32px;
+margin-bottom:12px;
+}
+
+.form-box p{
+color:#64748b;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:16px;
+margin-bottom:16px;
+border:1px solid #cbd5e1;
+border-radius:14px;
+font-size:15px;
+}
+
+.alert{
+color:#dc2626;
+font-weight:700;
+margin-bottom:14px;
+}
+
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+background:linear-gradient(135deg,#14b8a6,#0f766e);
+color:white;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+}
+
+.trust{
+font-size:13px;
+margin-top:15px;
+color:#64748b;
+}
+
+.success-box{
+background:#ecfdf5;
+padding:16px;
+border-radius:12px;
+color:#0f766e;
+margin-top:14px;
+font-weight:700;
+}
+
+.stats{
+padding:60px 8%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:30px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.stat h3{
+font-size:40px;
+color:#14b8a6;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.section h2{
+font-size:44px;
+margin-bottom:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:22px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card:hover{
+transform: translateY(-8px) scale(1.02);
+}
+
+@media(max-width:900px){
+.hero{
+grid-template-columns:1fr;
+}
+.hero h1{
+font-size:42px;
+}
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.features{
+grid-template-columns:1fr;
+}
+.stats{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">OrthoNow</div>
+<a href="tel:+919999999999" class="call-btn">Call Now</a>
+</header>
+
+<section class="hero">
+<div>
+<div class="badge">Trusted by 50,000+ Patients</div>
+<h1>Move Better. Live <span>Pain Free.</span></h1>
+
+<p>
+Consult top orthopaedic specialists for knee pain, back pain,
+sports injuries and joint issues.
+</p>
+
+<p style="margin-top:15px;color:#475569;font-size:15px;line-height:1.6;">
+Expert-led orthopaedic care by MS (Ortho) specialists — trusted across Bengaluru, Hyderabad, and Chennai.
+</p>
+
+<div class="features">
+<div class="feature">✓ 50K+ Patients Treated</div>
+<div class="feature">✓ 9 Clinics Across India</div>
+<div class="feature">✓ 4.8★ Patient Rating</div>
+<div class="feature">✓ Same-Day Consultation</div>
+</div>
+</div>
+
+<div class="form-box">
+<h2>Book Free Consultation</h2>
+<p>Talk to an expert within minutes.</p>
+
+<form id="consultForm">
+<input type="text" id="name" placeholder="Enter Your Name" required>
+<input type="tel" id="phone" placeholder="Enter Phone Number" required>
+
+<div class="alert">⚠ Limited consultation slots available today</div>
+
+<button type="submit">Book Consultation</button>
+
+<div class="trust">
+✓ No spam calls &nbsp;&nbsp; ✓ Callback within 10 mins
+</div>
+
+<p id="message" style="margin-top:14px; font-weight:700;"></p>
+</form>
+</div>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h3 class="counter" data-target="50">0</h3>
+    <p>K+ Patients</p>
+  </div>
+  <div class="stat">
+    <h3 class="counter" data-target="9">0</h3>
+    <p>Clinics</p>
+  </div>
+  <div class="stat">
+    <h3 class="counter" data-target="48">0</h3>
+    <p>/10 Rating</p>
+  </div>
+  <div class="stat">
+    <h3>24/7</h3>
+    <p>Support</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Common Conditions We Treat</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Knee Pain</h3>
+      <p>Diagnosis and personalized treatment plans for chronic and acute knee pain.</p>
+    </div>
+
+    <div class="card">
+      <h3>Back Pain</h3>
+      <p>Specialized spine care and posture-focused recovery solutions.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sports Injury</h3>
+      <p>Fast recovery programs for athletes and active individuals.</p>
+    </div>
+
+    <div class="card">
+      <h3>Joint Pain</h3>
+      <p>Expert treatment for stiffness, inflammation, and mobility issues.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Choose OrthoNow?</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Expert Specialists</h3>
+      <p>Highly experienced orthopaedic professionals.</p>
+    </div>
+
+    <div class="card">
+      <h3>Fast Appointments</h3>
+      <p>Book quickly with minimal waiting time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Modern Diagnostics</h3>
+      <p>Advanced diagnostic systems for accurate treatment.</p>
+    </div>
+
+    <div class="card">
+      <h3>Affordable Care</h3>
+      <p>High-quality treatment accessible to all.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What Patients Say</h2>
+
+  <div class="cards">
+    <div class="card">
+      <p>“Amazing consultation experience. Same-day appointment and great support.”</p>
+    </div>
+
+    <div class="card">
+      <p>“Doctor explained everything clearly. Recovery has been excellent.”</p>
+    </div>
+
+    <div class="card">
+      <p>“Smooth booking process and very professional staff.”</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="text-align:center;">
+  <div style="background:#0f172a;color:white;padding:60px;border-radius:28px;">
+    <h2 style="color:white;">Take The First Step Toward Recovery</h2>
+    <p style="margin-top:15px;color:#cbd5e1;">
+      Book a consultation with OrthoNow specialists today.
+    </p>
+    <a href="#consultForm" style="display:inline-block;margin-top:25px;background:linear-gradient(135deg,#14b8a6,#0f766e);color:white;padding:16px 28px;border-radius:14px;text-decoration:none;font-weight:700;">
+      Book Now
+    </a>
+  </div>
+</section>
+
+<footer style="background:#0f172a;color:white;text-align:center;padding:25px;">
+  © 2026 OrthoNow. All rights reserved.
+</footer>
+
+<script>
+const counters = document.querySelectorAll(".counter");
+counters.forEach(counter => {
+  let target = +counter.getAttribute("data-target");
+  let count = 0;
+
+  const updateCounter = () => {
+    let increment = target / 50;
+    if(count < target){
+      count += increment;
+      counter.innerText = Math.ceil(count);
+      setTimeout(updateCounter, 25);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
+
+const cards = document.querySelectorAll(".card");
+
+const checkCards = () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      card.classList.add("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", checkCards);
+window.addEventListener("load", checkCards);
+checkCards();
+
+window.dataLayer = window.dataLayer || [];
+
+document.getElementById("consultForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let message = document.getElementById("message");
+
+  if(name.length < 3){
+    message.className = "";
+    message.style.color = "red";
+    message.style.background = "none";
+    message.style.padding = "0";
+    message.innerText = "Please enter valid name.";
+    return;
+  }
+
+  if(!/^[0-9]{10}$/.test(phone)){
+    message.className = "";
+    message.style.color = "red";
+    message.style.background = "none";
+    message.style.padding = "0";
+    message.innerText = "Enter valid 10-digit phone number.";
+    return;
+  }
+
+  window.dataLayer.push({
+    event: "consultation_form_submitted",
+    lead_id: "ORTHO-" + Math.floor(Math.random()*100000),
+    device_type: window.innerWidth < 768 ? "mobile" : "desktop"
+  });
+
+  message.className = "success-box";
+  message.style.color = "";
+  message.style.background = "";
+  message.style.padding = "";
+  message.innerHTML = `
+Request received successfully.<br>
+Our clinic coordinator will call ${name} shortly to confirm your consultation.
+`;
+
+  document.getElementById("consultForm").reset();
+
+  console.log("dataLayer:", window.dataLayer);
+});
+
+document.querySelector(".call-btn").addEventListener("click", function(){
+  window.dataLayer.push({
+    event: "call_now_click",
+    page_location: window.location.href
+  });
+});
+</script>
+
+</body>
+</html>
